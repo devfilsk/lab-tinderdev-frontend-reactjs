@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Main.css';
 
 import api from '../services/api';
@@ -44,8 +45,10 @@ const [ users, setUsers ] = useState([]);
   }
 
   return (
-    <div className='main-container'> 
-      <img src={logo} alt="Tindev" />
+    <div className='main-container'>
+      <Link to='/'>
+        <img src={logo} alt="Tindev" />
+      </Link>
         {users.length > 0 ? (
           <ul>
           {users.map(user => (
